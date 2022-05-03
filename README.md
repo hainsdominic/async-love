@@ -39,6 +39,10 @@ I suggest buying all of them on aliexpress
 
 To build it you can use whatever you want, however I suggest using a perfboard.
 
+## Issues / Limitations
+
+I suspect there is some kind of caching on the gists, so the message only updates in around 3 minutes after the intial message.
+
 ## Contribution
 
 The code is developed in C++ using the Arduino framework with PlatformIO on VSCode. Feel free to improve the code and add features!
