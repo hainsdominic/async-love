@@ -103,6 +103,8 @@ void loop()
 
     if (lightValue < closedBoxThreshold)
     {
+      oled.clear();
+      oled.display();
       currentState = BoxState::FETCH;
     }
     break;
