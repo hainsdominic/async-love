@@ -37,6 +37,11 @@ public:
    */
   String getCurrentMessage() const;
 
+  /**
+   * @brief Set the Gist URL
+   *
+   * @param newGistUrl The new Gist URL
+   */
   void setGistUrl(const char *newGistUrl)
   {
     gistUrl_ = newGistUrl;
