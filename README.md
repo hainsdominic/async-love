@@ -4,16 +4,31 @@ An open DIY alternative to the LoveBox.
 Send cute messages to a simple box, without distracting anyone with notifications.
 
 ## How it works
+
 - Connect the device to a wifi network
 - It fetches a message from a gist
 - The translucid heart on the box is lit in a breathing fashion by a red led.
 - Open the box and read the message! The LED will turn off.
+
+## Installation
+
+Create a file named credentials.h in the include/ folder.
+Add these lines:
+```cpp
+const char *mySSID = "<SSID (Wifi name)>";
+const char *myPassword = "<Wifi Password>";
+
+// url to gist: /yourUsername/generatedHashValue/raw/yourFilename
+const char *myGist = "<GIST URL>";
+
+```
 
 ## Wiring
 
 ![wiring diagram](https://github.com/hainsdominic/async-love/blob/master/docs/images/wiring.png)
 
 ## Parts list
+
 I suggest buying all of them on aliexpress
 - WeMos D1 Mini
 - Ligh sensor (photoresistor)
@@ -25,6 +40,7 @@ I suggest buying all of them on aliexpress
 To build it you can use whatever you want, however I suggest using a perfboard.
 
 ## Contribution
+
 The code is developed in C++ using the Arduino framework with PlatformIO on VSCode. Feel free to improve the code and add features!
 Possible new features list:
 - Images
