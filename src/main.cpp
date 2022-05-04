@@ -17,7 +17,7 @@ BoxState currentState = BoxState::FETCH;
 
 const int lightSensorPin = A0;
 const int ledPin = D3;
-const int closedBoxThreshold = 400;
+const int closedBoxThreshold = 150;
 const int baudRate = 9600;
 
 const char *ssid = mySSID;
