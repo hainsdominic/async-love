@@ -67,6 +67,7 @@ To build it you can use whatever you want, however I suggest using a perfboard.
 ## Issues / Limitations
 
 I suspect there is some kind of caching on the gists, so the message only updates in around 3 minutes after the intial message.
+This is problem is not present using the lovebox-app solution.
 
 ## Contribution
 
