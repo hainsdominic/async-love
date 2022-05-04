@@ -16,7 +16,7 @@ void BoxWifi::connect()
 void BoxWifi::updateMessage()
 {
   const int httpsPort = 443;
-  const char *host = "gist.githubusercontent.com";
+  const char *host = "lovebox-a935b-default-rtdb.firebaseio.com";
 
   WiFiClientSecure client;
 
@@ -29,7 +29,7 @@ void BoxWifi::updateMessage()
     return;
   }
 
-  client.print(String("GET ") + gistUrl_ + " HTTP/1.1\r\n" +
+  client.print(String("GET ") + "/boxes/" + boxName_ + "/message.json" + " HTTP/1.1\r\n" +
                "Host: " + host + "\r\n" +
                "User-Agent: ESP8266\r\n" +
                "Connection: close\r\n\r\n");
@@ -46,6 +46,7 @@ void BoxWifi::updateMessage()
   }
   String payload = client.readStringUntil('\n');
   Serial.println("The payload is: " + payload);
+  payload.replace("\"", "");
   oldMessage_ = currentMessage_;
   currentMessage_ = payload;
 }

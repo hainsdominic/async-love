@@ -42,9 +42,9 @@ public:
    *
    * @param newGistUrl The new Gist URL
    */
-  void setGistUrl(const char *newGistUrl)
+  void setBoxName(const char *boxName)
   {
-    gistUrl_ = newGistUrl;
+    boxName_ = boxName;
   }
 
 private:
@@ -52,5 +52,5 @@ private:
   const char *password_;
   String oldMessage_;
   String currentMessage_;
-  String gistUrl_;
+  String boxName_;
 };

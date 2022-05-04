@@ -59,7 +59,7 @@ void setup()
   pinMode(lightSensorPin, INPUT);
   Serial.begin(baudRate);
 
-  box.setGistUrl(myGist);
+  box.setBoxName(boxName);
   box.connect();
 }
 
