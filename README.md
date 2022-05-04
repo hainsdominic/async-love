@@ -12,7 +12,12 @@ Send cute messages to a simple box, without distracting anyone with notification
 
 ## Installation
 
+You have two options. One uses github's gists and the other one uses a custom made firebase/react application.
+
+### Option 1
+
 Create a file named credentials.h in the include/ folder.
+
 Add these lines:
 ```cpp
 const char *mySSID = "<SSID (Wifi name)>";
@@ -20,8 +25,28 @@ const char *myPassword = "<Wifi Password>";
 
 // url to gist: /yourUsername/generatedHashValue/raw/yourFilename
 const char *myGist = "<GIST URL>";
-
 ```
+Then, go write something in the gist and the box should get display the message.
+
+### Option 2
+
+Deploy the lovebox app that I made, [available here](https://github.com/hainsdominic/lovebox-app/). The instructions are in the README.
+
+Use the lovebox-app branch:
+
+`git checkout lovebox-app`
+
+Create a file named credentials.h in the include/ folder.
+
+Add these lines:
+```cpp
+const char *mySSID = "<SSID (Wifi name)>";
+const char *myPassword = "<Wifi Password>";
+
+const char *boxName = "<NAME OF YOUR BOX>";
+```
+
+Thats it, you can now use the user-friendly front-end that you deployed.
 
 ## Wiring
 
