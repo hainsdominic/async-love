@@ -35,20 +35,13 @@ void BoxWifi::updateMessage()
                "Connection: close\r\n\r\n");
   Serial.println("Request sent");
 
-  // Skips the reading of the headers
-  while (client.connected())
-  {
-    String temp = client.readStringUntil('\n');
-    if (temp == "\r")
-    {
-      break;
-    }
-  }
-  String payload = client.readStringUntil('\n');
-  Serial.println("The payload is: " + payload);
-  payload.replace("\"", "");
+  String message = client.readString();
+  int start = message.indexOf("\"") + 1;
+  int end = message.lastIndexOf("\"");
+  message = message.substring(start, end);
+  Serial.println("The message is: " + message);
   oldMessage_ = currentMessage_;
-  currentMessage_ = payload;
+  currentMessage_ = message;
 }
 
 bool BoxWifi::isMessageNew()
